@@ -29,14 +29,7 @@ build/
 out/
 .next/
 
-# Assets pesados 
-assets/medio/*
-assets/media-videos/*
-*.mp4
-*.mov
-*.avi
-*.mkv
-assets/
+
 
 
 # Archivos de diseño grandes
