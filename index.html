@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaSense</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-hidden" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#inicio">
+                <img src="assets/logo.png" alt="Logo" class="logo-navbar me-2">
+                <span class="fw-bold">VocaSense</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button class="btn nav-link" data-bs-toggle="modal" data-bs-target="#modalPrivacy">
+                            Privacidad <i class="fa-solid fa-shield-halved"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn nav-link" data-bs-toggle="modal" data-bs-target="#modalTerms">
+                            Usos <i class="fa-solid fa-file-contract"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn nav-link" data-bs-toggle="modal" data-bs-target="#modalManual">
+                            Manual <i class="fa-solid fa-book"></i>
+                        </button>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<header class="hero-section" id="inicio">
+    <video autoplay muted loop class="hero-video">
+        <source src="assets/media/romix.MP4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="hero-content container position-relative z-2">
+        <h1 class="hero-title display-3 fw-bold mb-3">Captura, Transcribe y Analiza</h1>
+
+        <p class="hero-text lead mb-5 mx-auto" style="max-width: 700px; font-weight: bold; opacity: 0.9;">
+            VocaSense es la herramienta definitiva para gestionar grabaciones inteligentes, diseñada para entornos
+            profesionales.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+            <a href="assets/Instalador_VocaSense_v1.0.0.exe" download
+                class="btn btn-main btn-lg rounded-pill px-5 d-flex align-items-center shadow-lg">
+                <i class="fa-brands fa-windows me-2 fs-4"></i>
+                <div class="text-start lh-1">
+                    <span class="d-block small text-uppercase fw-bold" style="font-size: 0.7rem;">Descargar para</span>
+                    <span class="fw-bold">Windows</span>
+                </div>
+            </a>
+
+            <a href="#app-gallery" class="btn btn-glass btn-lg rounded-pill px-4 d-flex align-items-center">
+                <span>Explorar</span> <i class="fa-solid fa-arrow-down ms-2"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<section id="origen" class="py-5 origen">
+    <div class="container">
+        <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="d-flex justify-content-center align-items-center py-4">
+        
+                <div class="rounded-circle shadow d-flex justify-content-center align-items-center bg-white"
+                    style="width: 280px; height: 280px; border: 6px solid #4B9DA9; overflow: hidden;">
+        
+                    <img src="assets/historia.png" alt="Nacimiento VocaSense"
+                        style="width: 65%; height: auto; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+
+            <div class="col-lg-6">
+                <h5 class="text-primary fw-bold text-uppercase ls-2">Nuestra Historia</h5>
+                <h2 class="fw-bold mb-4">¿Cómo nace VocaSense?</h2>
+                <p class="lead text-muted">
+                    Todo comenzó a <strong>mediados de 2025</strong> con una frustración que seguramente conoces.
+                </p>
+                <p class="text-justify">
+                    En aquel entonces, dependíamos de plataformas de transcripción populares como <strong>Read
+                        AI</strong> y similares. Sin embargo, la experiencia se volvía tediosa: resultaba intrusivo y
+                    poco profesional ver cómo un <strong>"bot" extraño se unía a nuestras reuniones</strong>,
+                    incomodando a clientes y colegas.
+                </p>
+                <p class="text-justify">
+                    Además, era agotador configurar permisos específicos para cada aplicación de videollamada y lidiar
+                    con planes que <strong>cortaban las minutas a solo una hora</strong> de duración.
+                </p>
+                <p class="text-justify">
+                    Decidimos que debía haber una mejor forma. Así nació <strong>VocaSense</strong>: una solución que
+                    graba desde el sistema, sin bots invasivos, sin configuraciones complejas y con tiempo ilimitado
+                    para que tú solo te preocupes por hablar.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section  class="gallery-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark">Interfaz Intuitiva</h2>
+            <p class="text-muted">Observa las capacidades que ofrece VocaSense a tu entorno profesional.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-3 col-sm-6">
+                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
+                    data-bs-target="#galleryModal" data-image="assets/historial.png"
+                    data-title="Historial de Grabaciones"
+                    data-description="Accede rápidamente a todas tus sesiones anteriores. Puedes filtrar por fecha, palabras clave o etiquetas personalizadas para encontrar exactamente lo que buscas en segundos.">
+                    <img src="assets/historial.png" alt="Historial" class="img-fluid app-img">
+                    <div class="app-card-body text-center mt-2">
+                        <h5 class="fw-bold text-primary">Historial</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
+                    data-bs-target="#galleryModal" data-image="assets/uso.png" data-title="Modo de Grabación"
+                    data-description="Interfaz limpia y sin distracciones. Visualiza la plataforma donde estas grabando en tiempo real para asegurar que la grabación es correcta.">
+                    <img src="assets/uso.png" alt="Uso" class="img-fluid app-img">
+                    <div class="app-card-body text-center mt-2">
+                        <h5 class="fw-bold text-primary">En Acción</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
+                    data-bs-target="#galleryModal" data-image="assets/metricas.png" data-title="Análisis y Métricas"
+                    data-description="Obtén estadísticas detalladas sobre el hablante, pausas y sentimientos. VocaSense analiza el tono para entregarte reportes de efectividad comunicativa.">
+                    <img src="assets/metricas.png" alt="Métricas" class="img-fluid app-img">
+                    <div class="app-card-body text-center mt-2">
+                        <h5 class="fw-bold text-primary">Métricas</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
+                    data-bs-target="#galleryModal" data-image="assets/transcripcion.png"
+                    data-title="Transcripción en Vivo"
+                    data-description="Convierte voz a texto instantáneamente con nuestra IA. Soporta bilingüe (en próximas versiones múltiples idiomas) y diferenciación de oradores para minutas precisas.">
+                    <img src="assets/transcripcion.png" alt="Transcripción" class="img-fluid app-img">
+                    <div class="app-card-body text-center mt-2">
+                        <h5 class="fw-bold text-primary">Transcripción</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 bg-transparent">
+            <div class="position-relative overflow-hidden rounded-4 shadow-lg bg-dark">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <img src="" id="galleryImage" class="w-100 d-block"
+                    style="max-height: 80vh; object-fit: contain; background: black;">
+
+                <div class="modal-overlay p-4 text-white position-absolute bottom-0 w-100">
+                    <h3 class="fw-bold" id="galleryTitle">Título</h3>
+                    <p class="mb-0" id="galleryDesc">Descripción</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="app-gallery" class="flip-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Características de VocaSense</h2>
+            <p class="text-muted">Descubre todo lo que puedes hacer al descargar VocaSense.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-microphone-lines fa-4x text-primary mb-3"></i>
+                            <h4>Grabación HQ</h4>
+                        </div>
+                        <div class="flip-card-back bg-primary text-white">
+                            <h3>Audio Cristalino</h3>
+                            <p>Motor de mezcla estéreo que captura tu voz y la de los participantes sin perder detalles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-cloud-arrow-up fa-4x text-success mb-3"></i>
+                            <h4>Nube Segura</h4>
+                        </div>
+                        <div class="flip-card-back bg-success text-white">
+                            <h3>Respaldo Total</h3>
+                            <p>Sincronización automática con Azure y Supabase. Tus datos nunca se pierden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-language fa-4x text-warning mb-3"></i>
+                            <h4>Idiomas</h4>
+                        </div>
+                        <div class="flip-card-back bg-warning text-dark">
+                            <h3>Español e Inglés</h3>
+                            <p>Soporte actual bilingüe. Próximamente actualización con más idiomas globales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-brain fa-4x text-danger mb-3"></i>
+                            <h4>Motor Speched IA</h4>
+                        </div>
+                        <div class="flip-card-back bg-danger text-white">
+                            <h3>Alta Precisión</h3>
+                            <p>Entendimiento del 99% en Español y 90% en combinaciones "Spanglish".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-file-export fa-4x text-info mb-3"></i>
+                            <h4>Exportación</h4>
+                        </div>
+                        <div class="flip-card-back bg-info text-white">
+                            <h3>Datos Portables</h3>
+                            <p>Copia tu transcripción al portapapeles o descárgala directamente en formato .txt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-user-shield fa-4x text-secondary mb-3"></i>
+                            <h4>Acceso Único</h4>
+                        </div>
+                        <div class="flip-card-back bg-secondary text-white">
+                            <h3>Identidad Real</h3>
+                            <p>Sistema de validación estricta por correo electrónico. Un usuario, una cuenta segura.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-wand-magic-sparkles fa-4x text-dark mb-3"></i>
+                            <h4>Diseño Intuitivo</h4>
+                        </div>
+                        <div class="flip-card-back bg-dark text-white">
+                            <h3>Experiencia Fluida</h3>
+                            <p>Interfaz limpia (UI) y fácil de usar (UX), diseñada para que te enfoques en la
+                                conversación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front shadow-sm bg-white">
+                            <i class="fa-solid fa-laptop-code fa-4x text-primary mb-3"></i>
+                            <h4>Multiplataforma</h4>
+                        </div>
+                        <div class="flip-card-back bg-primary text-white">
+                            <h3>Para Todos</h3>
+                            <p>Compatible y optimizado para ejecutarse nativamente en Windows, Mac y Linux.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="benefits-scroll" class="comparison-section container">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold display-5">¿Por qué elegir VocaSense?</h2>
+        <p class="text-muted">No pagues más por menos.</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="comparison-box box-vocasense shadow h-100">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="assets/logo.png" alt="VocaSense" style="height: 40px;" class="me-3">
+                    <h3 class="fw-bold text-primary mb-0">Con VocaSense</h3>
+                </div>
+
+                <ul class="feature-list p-0">
+                    <li class="mb-3"><i class="fa-solid fa-infinity text-primary me-2"></i> <strong>Transcripción
+                            Ilimitada:</strong> Graba horas sin cortes ni restricciones.</li>
+
+                    <li class="mb-3"><i class="fa-solid fa-user-shield text-primary me-2"></i> <strong>100%
+                            Privado:</strong> Grabación local vía Hardware. Sin "Bots" extraños uniéndose a tus
+                        reuniones.</li>
+
+                    <li class="mb-3"><i class="fa-solid fa-chart-pie text-primary me-2"></i> <strong>Métricas
+                            Avanzadas:</strong> Análisis de sentimientos y participación del hablante en tiempo real.
+                    </li>
+
+                    <li class="mb-3"><i class="fa-brands fa-microsoft text-primary me-2"></i> <strong>Infraestructura
+                            Robusta:</strong> Datos asegurados en Azure y Supabase.</li>
+
+                    <li class="mb-3"><i class="fa-solid fa-file-export text-primary me-2"></i> <strong>Exportación
+                            Flexible:</strong> Descarga tus minutas en TXT, JSON o copia directa.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="comparison-box box-others shadow-sm opacity-75 h-100">
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fa-solid fa-circle-xmark fa-2x text-danger me-3"></i>
+                    <h3 class="fw-bold text-danger mb-0">Otras Apps</h3>
+                </div>
+
+                <ul class="feature-list p-0">
+                    <li class="mb-3 text-muted"><i class="fa-solid fa-stopwatch text-danger me-2"></i> <strong>Límites
+                            Absurdos:</strong> Cortan tu reunión a los 40 o 60 minutos en planes básicos.</li>
+
+                    <li class="mb-3 text-muted"><i class="fa-solid fa-ban text-danger me-2"></i> <strong>Restricción de
+                            Uso:</strong> Solo permiten 1 o 2 videoconferencias procesadas al mes si no pagas.</li>
+
+                    <li class="mb-3 text-muted"><i class="fa-solid fa-sack-dollar text-danger me-2"></i>
+                        <strong>Suscripciones Caras:</strong> Costos mensuales elevados (desde $20 USD) para funciones
+                        básicas.</li>
+
+                    <li class="mb-3 text-muted"><i class="fa-solid fa-robot text-danger me-2"></i> <strong>Bots
+                            Intrusivos:</strong> Necesitan entrar a tu reunión de Zoom/Teams como un participante más,
+                        incomodando a los clientes.</li>
+
+                    <li class="mb-3 text-muted"><i class="fa-solid fa-trash-can text-danger me-2"></i> <strong>Borrado
+                            de Datos:</strong> Eliminan tu historial antiguo si dejas de pagar.</li>
+                </ul>
+            </div>
+        </div>
+
+        </div>
+        <div class="text-center mt-5 mb-4">
+            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 text-uppercase ls-1">
+                El poder de VocaSense
+            </span>
+            <h3 class="mt-3 fw-bold">Potencia y simplicidad en una sola aplicación</h3>
+        </div>
+        
+        <div class="showcase-container mx-auto">
+            <div class="showcase-card shadow-lg">
+                <img src="assets/funciones.png" alt="Captura de pantalla de las funciones de VocaSense" class="img-fluid">
+            </div>
+            <div class="showcase-glow"></div>
+        </div>
+        
+        
+    </div>
+</section>
+
+    <section id="tutoriales" class=" bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Domina VocaSense</h2>
+                <p class="text-white-50">Aprende a utilizar todas las funciones en minutos</p>
+            </div>
+    
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-secondary h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls class="rounded-top">
+                                <source src="assets/media/Voca1.mp4" type="video/mp4">
+                                Tu navegador no soporta video.
+                            </video>
+                        </div>
+                        <div class="card-body bg-dark border border-secondary border-top-0 rounded-bottom">
+                            <h5 class="card-title text-info text-center"><i class="fa-solid fa-play me-2"></i>Primeros Pasos</h5>
+                            <p class="card-text small text-muted">Configuración inicial y crear una cuenta.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card border-0 bg-secondary h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls class="rounded-top">
+                                <source src="assets/media/stereo-mix.mp4" type="video/mp4">
+                                Tu navegador no soporta video.
+                            </video>
+                        </div>
+                        <div class="card-body bg-dark border border-secondary border-top-0 rounded-bottom">
+                            <h5 class="card-title text-info text-center"><i class="fa-solid fa-sliders me-2"></i>Ajustes de Audio</h5>
+                            <p class="card-text small text-muted">Cómo configurar la Mezcla Estéreo correctamente en Windows.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card border-0 bg-secondary h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls class="rounded-top">
+                                <source src="assets/media/Voca3.mp4" type="video/mp4">
+                                Tu navegador no soporta video.
+                            </video>
+                        </div>
+                        <div class="card-body bg-dark border border-secondary border-top-0 rounded-bottom">
+                            <h5 class="card-title text-info text-center"><i class="fa-solid fa-file-export me-2"></i>Exportación</h5>
+                            <p class="card-text small text-muted">Generando reportes y exportando a texto.</p>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 bg-secondary h-100">
+                    <div class="ratio ratio-16x9">
+                        <video controls muted class="rounded-top">
+                            <source src="assets/media/romi.mp4" type="video/mp4">
+                            Tu navegador no soporta video.
+                        </video>
+                    </div>
+                    <div class="card-body bg-dark border border-secondary border-top-0 rounded-bottom">
+                        <h5 class="card-title text-info text-center">
+                            <i class="fa-solid fa-person-running"></i> Como se ve VocaSense en acción
+                        </h5>
+                        <p class="card-text small text-muted">Demostración de la interfaz en un entorno real.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+    
+            <div class="text-center mt-5">
+                <p class="text-muted">¿Necesitas más ayuda? Revisa nuestro <a href="#" data-bs-toggle="modal"
+                        data-bs-target="#modalManual" class="text-info text-decoration-none">Manual de Usuario</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h4 class="fw-bold">VocaSense</h4>
+            <div class="mb-4 social-icons">
+                <a href="#" class="text-white mx-2"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <small>&copy; 2025 VocaSense.</small>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalPrivacy" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div
+                    class="modal-header d-flex flex-column align-items-center justify-content-center custom-modal-header">
+                    <img src="assets/logo.png" alt="Logo" class="mb-2" style="width: 50px;">
+                    <h5 class="modal-title fw-bold">Política de Privacidad</h5>
+                    <button type="button" class="btn-close position-absolute end-0 top-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-justify">
+                    <h6 class="fw-bold">En VocaSense, tomamos la seguridad de sus datos y la ética de la grabación muy
+                        en serio.</h6>
+                    <br>
+                    <p class="fw-bold">1. Uso y Protección de Datos</p>
+                    <p>La información capturada por VocaSense (grabaciones de audio y transcripciones resultantes) se
+                        utiliza exclusivamente para proporcionarle el servicio de análisis y registro.</p>
+                    <ul>
+                        <li><strong>No comercialización:</strong> Sus datos de voz, texto y metadatos nunca serán
+                            vendidos, rentados ni compartidos con terceros con fines publicitarios o de marketing.</li>
+                        <li><strong>Procesamiento:</strong> Los datos pueden ser procesados a través de servicios en la
+                            nube seguros (como Azure) únicamente para generar la transcripción. Estos datos no se
+                            utilizan para entrenar modelos de IA públicos sin su consentimiento explícito.</li>
+                    </ul>
+                    <hr>
+                    <p class="fw-bold">2. Aviso Legal: Grabación de Llamadas y Consentimiento</p>
+                    <p>El uso de VocaSense implica la grabación de voces de terceras personas. Como usuario del
+                        software, usted acepta la siguiente responsabilidad legal y ética:</p>
+                    <div class="alert alert-warning">
+                        <strong>⚠️ OBLIGATORIO: Consentimiento Informado</strong><br>
+                        Antes de iniciar cualquier grabación con VocaSense, usted tiene la obligación legal y ética de
+                        informar a todos los participantes de la llamada que la conversación será grabada y transcrita.
+                        <br><em>Ejemplo: "Para propósitos de minuta y análisis, estaré grabando y transcribiendo esta
+                            conversación..."</em>
+                    </div>
+                    <p>El incumplimiento de este requisito puede violar leyes locales o federales. VocaSense se deslinda
+                        de cualquier responsabilidad legal derivada del uso indebido.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTerms" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div
+                    class="modal-header d-flex flex-column align-items-center justify-content-center custom-modal-header">
+                    <img src="assets/logo.png" alt="Logo" class="mb-2" style="width: 50px;">
+                    <h5 class="modal-title fw-bold">Términos de Uso</h5>
+                    <button type="button" class="btn-close position-absolute end-0 top-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-justify">
+                    <p>Al descargar y utilizar VocaSense, usted acepta cumplir con nuestra política de privacidad y
+                        normas éticas de grabación.</p>
+                    <p>El usuario es el único responsable de obtener el consentimiento de las partes grabadas. VocaSense
+                        es una herramienta técnica y no asume responsabilidad por el contenido de las conversaciones ni
+                        por la legalidad de la grabación en la jurisdicción del usuario.</p>
+                    <p>El software se proporciona "tal cual", sin garantías adicionales a las descritas en el manual
+                        técnico.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalManual" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div
+                    class="modal-header d-flex flex-column align-items-center justify-content-center custom-modal-header">
+                    <img src="assets/logo.png" alt="Logo" class="mb-2" style="width: 50px;">
+                    <h5 class="modal-title fw-bold">Manual de Usuario: VocaSense V1.0</h5>
+                    <button type="button" class="btn-close position-absolute end-0 top-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-justify">
+
+                    <div class="alert alert-danger border-danger mb-4">
+                        <h5 class="fw-bold"><i class="fa-solid fa-triangle-exclamation"></i> 2. Configuración Crítica de
+                            Audio (IMPORTANTE)</h5>
+                        <p>Para garantizar que VocaSense capture tanto su voz como la de los demás participantes, y
+                            evitar errores:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="text-success fw-bold">✅ Lo que DEBE usar:</h6>
+                                <ul>
+                                    <li><strong>Auriculares con cable:</strong> Conectados físicamente (USB o Jack
+                                        3.5mm).</li>
+                                    <li><strong>Entrada de Audio (Input):</strong> Configure "Mezcla Estéreo" (Stereo
+                                        Mix) o dispositivo Loopback para capturar el audio interno. Habilite su
+                                        micrófono para su propia voz.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-danger fw-bold">❌ Lo que NO DEBE usar:</h6>
+                                <ul>
+                                    <li><strong>🚫 No use Altavoces/Bocinas externas:</strong> Causará eco infinito
+                                        (feedback).</li>
+                                    <li><strong>🚫 Evite Bluetooth:</strong> La latencia desincroniza el análisis de
+                                        voz.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="fw-bold mb-3">1. Instalación y Compatibilidad</h5>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
+                                data-bs-target="#win">Windows</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#mac">macOS</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#linux">Linux</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#pasos">Instrucciones de Uso</button></li>
+                    </ul>
+
+                    <div class="tab-content p-4 border border-top-0 bg-light rounded-bottom" id="myTabContent">
+                        <div class="tab-pane fade show active" id="win">
+                            <p><i class="fa-brands fa-windows me-2"></i><strong>Windows:</strong> Ejecute el instalador
+                                <code>.exe</code> y siga los pasos del asistente.</p>
+                            <p class="text-muted">Se recomienda ejecutar como administrador la primera vez para
+                                configurar los permisos de audio.</p>
+                        </div>
+                        <div class="tab-pane fade" id="mac">
+                            <p><i class="fa-brands fa-apple me-2"></i><strong>macOS:</strong> Abra el archivo
+                                <code>.dmg</code> y arrastre el icono de VocaSense a la carpeta de Aplicaciones.</p>
+                            <p class="text-muted">Al abrirla por primera vez, deberá otorgar permisos de "Accesibilidad"
+                                y "Micrófono" en Preferencias del Sistema.</p>
+                        </div>
+                        <div class="tab-pane fade" id="linux">
+                            <p><i class="fa-brands fa-linux me-2"></i><strong>Linux:</strong> Instale el paquete
+                                <code>.deb</code> o haga ejecutable el archivo <code>.AppImage</code>.</p>
+                            <p class="small">Click derecho -> Propiedades -> Permitir ejecutar como programa.</p>
+                        </div>
+                        <div class="tab-pane fade" id="pasos">
+                            <ol>
+                                <li>Conecte sus auriculares con cable.</li>
+                                <li>Inicie su aplicación de videollamadas (Zoom, Teams, Meet, etc.).</li>
+                                <li>Abra VocaSense.</li>
+                                <li>Verifique en la barra de estado que la entrada sea "Mezcla Estéreo".</li>
+                                <li>Presione <strong>"Grabar"</strong> antes de iniciar la conversación.</li>
+                                <li>Al finalizar, presione "Detener". La transcripción comenzará a procesarse.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
