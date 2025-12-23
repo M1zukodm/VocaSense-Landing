@@ -1,0 +1,15 @@
+{
+  "name": "vocasense-optimizer",
+  "version": "1.0.0",
+  "scripts": {
+    "optimize": "node optimize.js && node optimize-videos.js",
+    "optimize:images": "node optimize.js",
+    "optimize:videos": "node optimize-videos.js",
+    "webp": "bash optimize-images.sh",
+    "stats": "node -e \"const fs=require('fs');const d='assets/img';const s=fs.readdirSync(d).reduce((a,f)=>{const stat=fs.statSync(d+'/'+f);return a+(stat.isFile()?stat.size:0)},0);console.log('📁 Tamaño total imágenes:', (s/(1024*1024)).toFixed(2), 'MB');\""
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {}
+}

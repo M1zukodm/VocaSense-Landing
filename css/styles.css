@@ -490,3 +490,68 @@ section {
     opacity: 1;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dc3545'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
 }
+
+/* Estilos para lazy loading de videos */
+.lazy-video {
+    background-color: #1a1a1a;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar thumbnail mientras carga */
+.lazy-video:not([data-loaded="true"]) {
+    background-image: var(--poster);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Indicador de carga */
+.lazy-video::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #4B9DA9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+    z-index: 2;
+}
+
+.lazy-video:not([data-loaded="true"])::before {
+    opacity: 1;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Botón play personalizado */
+.lazy-video::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-video[data-loaded="true"]::after {
+    opacity: 0;
+}
+
+.lazy-video:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}

@@ -47,7 +47,12 @@
     </nav>
 
 <header class="hero-section" id="inicio">
-    <video autoplay muted loop class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video" preload="metadata">
+        <!-- Versión desktop -->
+        <source src="assets/media/optimized/romix_mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+        <!-- Versión móvil -->
+        <source src="assets/media/optimized/romix.mp4" type="video/mp4">
+        <!-- Fallback -->
         <source src="assets/media/romix.MP4" type="video/mp4">
     </video>
 
@@ -131,11 +136,15 @@
         <div class="row g-4 justify-content-center">
 
             <div class="col-md-3 col-sm-6">
-                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
-                    data-bs-target="#galleryModal" data-image="assets/img/historial.png"
-                    data-title="Historial de Grabaciones"
+                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-image="assets/img/webp/historial.webp" data-title="Historial de Grabaciones"
                     data-description="Accede rápidamente a todas tus sesiones anteriores. Puedes filtrar por fecha, palabras clave o etiquetas personalizadas para encontrar exactamente lo que buscas en segundos.">
-                    <img src="assets/img/historial.png" alt="Historial" class="img-fluid app-img">
+                
+                    <picture>
+                        <source srcset="assets/img/webp/historial.webp" type="image/webp">
+                
+                        <img src="assets/img/historial.png" alt="Historial" class="img-fluid app-img">
+                    </picture>
                     <div class="app-card-body text-center mt-2">
                         <h5 class="fw-bold text-primary">Historial</h5>
                     </div>
@@ -143,10 +152,15 @@
             </div>
 
             <div class="col-md-3 col-sm-6">
-                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
-                    data-bs-target="#galleryModal" data-image="assets/img/uso.png" data-title="Modo de Grabación"
+                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-image="assets/img/webp/uso.webp" data-title="Modo de Grabación"
                     data-description="Interfaz limpia y sin distracciones. Visualiza la plataforma donde estas grabando en tiempo real para asegurar que la grabación es correcta.">
-                    <img src="assets/img/uso.png" alt="Uso" class="img-fluid app-img">
+                
+                    <picture>
+                        <source srcset="assets/img/webp/uso.webp" type="image/webp">
+                
+                        <img src="assets/img/uso.png" alt="Uso" class="img-fluid app-img">
+                    </picture>
                     <div class="app-card-body text-center mt-2">
                         <h5 class="fw-bold text-primary">En Acción</h5>
                     </div>
@@ -154,27 +168,36 @@
             </div>
 
             <div class="col-md-3 col-sm-6">
-                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
-                    data-bs-target="#galleryModal" data-image="assets/img/metricas.png" data-title="Análisis y Métricas"
+                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-image="assets/img/webp/metricas.webp" data-title="Análisis y Métricas"
                     data-description="Obtén estadísticas detalladas sobre el hablante, pausas y sentimientos. VocaSense analiza el tono para entregarte reportes de efectividad comunicativa.">
-                    <img src="assets/img/metricas.png" alt="Métricas" class="img-fluid app-img">
+                
+                    <picture>
+                        <source srcset="assets/img/webp/metricas.webp" type="image/webp">
+                
+                        <img src="assets/img/metricas.png" alt="Métricas" class="img-fluid app-img">
+                    </picture>
                     <div class="app-card-body text-center mt-2">
                         <h5 class="fw-bold text-primary">Métricas</h5>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
-                <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal"
-                    data-bs-target="#galleryModal" data-image="assets/img/transcripcion.png"
-                    data-title="Transcripción en Vivo"
-                    data-description="Convierte voz a texto instantáneamente con nuestra IA. Soporta bilingüe (en próximas versiones múltiples idiomas) y diferenciación de oradores para minutas precisas.">
+        <div class="col-md-3 col-sm-6">
+            <div class="app-card shadow hover-scale cursor-pointer" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-image="assets/img/webp/transcripcion.webp" data-title="Transcripción en Vivo"
+                data-description="Convierte voz a texto instantáneamente con nuestra IA. Soporta bilingüe (en próximas versiones múltiples idiomas) y diferenciación de oradores para minutas precisas.">
+        
+                <picture>
+                    <source srcset="assets/img/webp/transcripcion.webp" type="image/webp">
+        
                     <img src="assets/img/transcripcion.png" alt="Transcripción" class="img-fluid app-img">
-                    <div class="app-card-body text-center mt-2">
-                        <h5 class="fw-bold text-primary">Transcripción</h5>
-                    </div>
+                </picture>
+                <div class="app-card-body text-center mt-2">
+                    <h5 class="fw-bold text-primary">Transcripción</h5>
                 </div>
             </div>
+        </div>
 
         </div>
     </div>
@@ -406,8 +429,15 @@
         
         <div class="showcase-container mx-auto">
             <div class="showcase-card shadow-lg">
-                <img src="assets/img/funciones.png" alt="Captura de pantalla de las funciones de VocaSense" class="img-fluid">
-            </div>
+<picture>
+    <!-- WebP moderno -->
+    <source srcset="assets/img/webp/funciones.webp" type="image/webp">
+    <!-- JPG optimizado -->
+    <source srcset="assets/img/optimized/funciones_opt.jpg" type="image/jpeg">
+    <!-- Fallback original -->
+    <img src="assets/img/funciones.png" alt="Captura de pantalla de las funciones de VocaSense" class="img-fluid"
+        loading="lazy" width="1200" height="1200">
+</picture>            </div>
             <div class="showcase-glow"></div>
         </div>
         
@@ -427,7 +457,7 @@
                     <div class="card border-0 bg-secondary h-100">
                         <div class="ratio ratio-16x9">
                             <video controls class="rounded-top">
-                                <source src="assets/media/Voca1.mp4" type="video/mp4">
+                                <source src="assets/media/optimized/primerospasos.mp4" type="video/mp4">
                                 Tu navegador no soporta video.
                             </video>
                         </div>
@@ -442,7 +472,7 @@
                     <div class="card border-0 bg-secondary h-100">
                         <div class="ratio ratio-16x9">
                             <video controls class="rounded-top">
-                                <source src="assets/media/stereo-mix.mp4" type="video/mp4">
+                                <source src="assets/media/optimized/stereomix.mp4" type="video/mp4">
                                 Tu navegador no soporta video.
                             </video>
                         </div>
@@ -457,13 +487,13 @@
                     <div class="card border-0 bg-secondary h-100">
                         <div class="ratio ratio-16x9">
                             <video controls class="rounded-top">
-                                <source src="assets/media/Voca3.mp4" type="video/mp4">
+                                <source src="assets/media/optimized/Voca3.mp4" type="video/mp4">
                                 Tu navegador no soporta video.
                             </video>
                         </div>
                         <div class="card-body bg-dark border border-secondary border-top-0 rounded-bottom">
-                            <h5 class="card-title text-info text-center"><i class="fa-solid fa-file-export me-2"></i>Exportación</h5>
-                            <p class="card-text small text-muted">Generando reportes y exportando a texto.</p>
+                            <h5 class="card-title text-info text-center"><i class="fa-solid fa-file-export me-2"></i>Como funciona el historial</h5>
+                            <p class="card-text small text-muted">Analiza tu historial de grabaciones.</p>
                         </div>
                     </div>
                 </div>
@@ -472,7 +502,7 @@
                 <div class="card border-0 bg-secondary h-100">
                     <div class="ratio ratio-16x9">
                         <video controls muted class="rounded-top">
-                            <source src="assets/media/romi.mp4" type="video/mp4">
+                            <source src="assets/media/optimized/romi.mp4" type="video/mp4">
                             Tu navegador no soporta video.
                         </video>
                     </div>
