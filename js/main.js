@@ -243,4 +243,27 @@ if (galleryModal) {
         modalTitle.textContent = title;
         modalDesc.textContent = description;
     });
+
+    /* --- LÓGICA DE DESCARGA DE VERSIONES --- */
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const btnDownload = document.getElementById('btnDownload');
+    const versionSelector = document.getElementById('versionSelector');
+
+    // Solo activamos la lógica si el botón existe en la página
+    if (btnDownload && versionSelector) {
+        
+        btnDownload.addEventListener('click', function() {
+            // 1. Obtener la URL del select
+            const url = versionSelector.value;
+            
+            // 2. Validar que no esté vacío (opcional)
+            if (url) {
+                // 3. Forzar la descarga
+                window.location.href = url;
+            }
+        });
+        
+    }
+});
 }

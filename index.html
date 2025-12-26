@@ -66,21 +66,21 @@
             profesionales.
         </p>
 
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-
-            <a href="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.0.0/Instalador_VocaSense_v1.0.0.exe" download
-                class="btn btn-main btn-lg rounded-pill px-5 d-flex align-items-center shadow-lg">
-                <i class="fa-brands fa-windows me-2 fs-4"></i>
-                <div class="text-start lh-1">
-                    <span class="d-block small text-uppercase fw-bold" style="font-size: 0.7rem;">Descargar para</span>
-                    <span class="fw-bold">Windows</span>
-                </div>
-            </a>
-
-            <a href="#app-gallery" class="btn btn-glass btn-lg rounded-pill px-4 d-flex align-items-center">
-                <span>Explorar</span> <i class="fa-solid fa-arrow-down ms-2"></i>
-            </a>
-        </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+    
+        <button type="button" class="btn btn-main btn-lg rounded-pill px-5 d-flex align-items-center shadow-lg"
+            data-bs-toggle="modal" data-bs-target="#versionModal">
+            <i class="fa-brands fa-windows me-2 fs-4"></i>
+            <div class="text-start lh-1">
+                <span class="d-block small text-uppercase fw-bold" style="font-size: 0.7rem;">Descargar para</span>
+                <span class="fw-bold">Windows</span>
+            </div>
+        </button>
+    
+        <a href="#app-gallery" class="btn btn-glass btn-lg rounded-pill px-4 d-flex align-items-center">
+            <span>Explorar</span> <i class="fa-solid fa-arrow-down ms-2"></i>
+        </a>
+    </div>
     </div>
 </header>
 
@@ -683,6 +683,65 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="versionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg"
+                style="background: #1e293b; color: white; border-radius: 20px; overflow: hidden;">
+    
+                <div class="modal-header border-bottom border-secondary" style="background: rgba(0,0,0,0.2);">
+                    <h5 class="modal-title fw-bold text-white">
+                        <i class="fa-brands fa-windows text-primary me-2"></i> Selecciona tu versión
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+    
+                <div class="modal-body p-4">
+                    <p class="text-white-50 small mb-3">Elige la versión que deseas instalar en tu equipo:</p>
+    
+                    <a href="LINK_DE_TU_NUEVO_EXE_V1.1.0" class="version-card active mb-3 text-decoration-none">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box bg-primary text-white me-3">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-white">VocaSense v1.1.0</h6>
+                                    <small class="text-success fw-bold" style="font-size: 0.75rem;"> <i class="fa-solid fa-circle-check"></i> Recomendada</small>
+                                    <div class="text-white-50 small mt-1">Incluye resumenes con IA, Descarga de resumen y Mejoras visuales.
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-download text-white fs-5"></i>
+                        </div>
+                    </a>
+    
+                    <a href="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.0.0/Instalador_VocaSense_v1.0.0.exe"
+                        class="version-card text-decoration-none">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box bg-secondary text-white me-3">
+                                    <i class="fa-solid fa-box-archive"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-white-50">VocaSense v1.0.0</h6>
+                                    <small class="text-white-50" style="font-size: 0.75rem;">Versión estable</small>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-download text-secondary fs-6"></i>
+                        </div>
+                    </a>
+    
+                </div>
+    
+                <div class="modal-footer border-top border-secondary justify-content-center p-2"
+                    style="background: rgba(0,0,0,0.2);">
+                    <small class="text-white-50" style="font-size: 0.7rem;">Compatible con Windows 10 y 11 (x64)</small>
                 </div>
             </div>
         </div>
