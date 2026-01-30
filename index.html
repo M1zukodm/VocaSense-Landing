@@ -730,84 +730,100 @@
         </div>
     </div>
 
-    <div class="modal fade" id="versionModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg"
-                style="background: #1e293b; color: white; border-radius: 20px; overflow: hidden;">
-    
-                <div class="modal-header border-bottom border-secondary" style="background: rgba(0,0,0,0.2);">
-                    <h5 class="modal-title fw-bold text-white">
-                        <i class="fa-brands fa-windows text-primary me-2"></i> Selecciona tu versión
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-    
-                <div class="modal-body p-4">
-                    <p class="text-white-50 small mb-3">Elige la versión que deseas instalar:</p>
-                
-                    <a href="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.1.1/VocaSense_v1.1.1.exe"
-                        class="version-card active mb-3 text-decoration-none" style="border: 1px solid #0d6efd;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <div class="icon-box bg-primary text-white me-3">
-                                    <i class="fa-solid fa-flask"></i>
+<div class="modal fade" id="versionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg"
+            style="background: #1e293b; color: white; border-radius: 20px; overflow: hidden; border: 1px solid #334155;">
+
+            <div class="modal-header border-bottom border-secondary" style="background: rgba(0,0,0,0.4);">
+                <h5 class="modal-title fw-bold text-white">
+                    <i class="fa-brands fa-windows text-info me-2"></i> Descargar VocaSense
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <p class="text-white fw-bold small mb-3">Versión más reciente:</p>
+
+                <a href="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v2.0.0/VocaSense_Setup_v2.0.0.exe"
+                    class="version-card active mb-4 text-decoration-none"
+                    style="border: 2px solid #0dcaf0; background: rgba(13, 202, 240, 0.15); display: block; border-radius: 12px; padding: 15px; transition: transform 0.2s;">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-box bg-info text-dark me-3 rounded-circle d-flex align-items-center justify-content-center shadow"
+                                style="width: 50px; height: 50px;">
+                                <i class="fa-solid fa-rocket fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 text-white">
+                                    VocaSense v2.0.0 <span class="badge bg-danger ms-1">NUEVO</span>
+                                </h5>
+
+                                <div class="mb-1">
+                                    <span class="badge bg-primary me-1"><i class="fa-solid fa-thumbs-up"></i>
+                                        Recomendada</span>
+                                    <span class="badge bg-warning text-dark">Experimental</span>
                                 </div>
-                                <div>
-                                    <h6 class="fw-bold mb-0 text-white">VocaSense v1.1.1</h6>
-                                    <small class="text-warning fw-bold" style="font-size: 0.75rem;">
-                                        <i class="fa-solid fa-star"></i> Experimental & Recomendada
-                                    </small>
-                                    <div class="text-white-50 small mt-1">
-                                        Incluye alertas nativas antes de videoconferencias sin tener la app abierta o minimizada.
-                                    </div>
+
+                                <div class="text-white small mt-2" style="opacity: 1;">
+                                    <strong>Native Core:</strong> Sin Stereo Mix, Soporte Bluetooth y One-Click.
                                 </div>
                             </div>
-                            <i class="fa-solid fa-download text-white fs-5"></i>
                         </div>
-                    </a>
-                
-                    <a href="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.1.0/Instalador_VocaSense_v1.1.0.exe"
-                        class="version-card mb-2 text-decoration-none">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <div class="icon-box bg-success text-white me-3">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <div>
-                                    <h6 class="fw-bold mb-0 text-white-50">VocaSense v1.1.0</h6>
-                                    <small class="text-white-50" style="font-size: 0.75rem;">Versión Estable</small>
-                                </div>
+                        <i class="fa-solid fa-download text-info fs-2"></i>
+                    </div>
+                </a>
+
+                <hr class="border-secondary my-4" style="opacity: 0.5;">
+
+                <p class="text-white fw-bold small mb-2">Versión anterior estable:</p>
+
+                <a href="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.1.1/VocaSense_v1.1.1.exe"
+                    class="version-card mb-3 text-decoration-none border border-secondary"
+                    style="display: block; border-radius: 10px; padding: 12px; background: rgba(255,255,255,0.08);">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-box bg-success text-white me-3 rounded d-flex align-items-center justify-content-center shadow-sm"
+                                style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-check fs-5"></i>
                             </div>
-                            <i class="fa-solid fa-download text-secondary fs-6"></i>
-                        </div>
-                    </a>
-                
-                    <a href="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.0.0/Instalador_VocaSense_v1.0.0.exe"
-                        class="version-card text-decoration-none opacity-75">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <div class="icon-box bg-dark text-white border border-secondary me-3">
-                                    <i class="fa-solid fa-box-archive"></i>
-                                </div>
-                                <div>
-                                    <h6 class="fw-bold mb-0 text-white-50">VocaSense v1.0.0</h6>
-                                    <small class="text-white-50" style="font-size: 0.75rem;">Versión Inicial</small>
-                                </div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-white">VocaSense v1.1.1</h6>
+                                <small class="text-white" style="opacity: 0.9;">
+                                    Estable (Legacy) - <strong class="text-warning">Requiere Stereo Mix</strong>
+                                </small>
                             </div>
-                            <i class="fa-solid fa-download text-secondary fs-6"></i>
                         </div>
-                    </a>
-                
+                        <i class="fa-solid fa-download text-white fs-5"></i>
+                    </div>
+                </a>
+
+                <div class="mt-4">
+                    <label class="text-white small mb-2 fw-bold"><i class="fa-solid fa-box-archive me-1"></i> Archivo
+                        histórico:</label>
+                    <select class="form-select form-select-sm bg-dark text-white border-secondary"
+                        onchange="if (this.value) window.location.href=this.value"
+                        style="cursor: pointer; padding: 8px;">
+                        <option selected disabled>Seleccionar versión antigua...</option>
+                        <option
+                            value="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.1.0/Instalador_VocaSense_v1.1.0.exe">
+                            v1.1.0 (Versión 2025)</option>
+                        <option
+                            value="https://github.com/M1zukodm/VocaSense-Landing/releases/download/v1.0.0/Instalador_VocaSense_v1.0.0.exe">
+                            v1.0.0 (Inicial)</option>
+                    </select>
                 </div>
-    
-                <div class="modal-footer border-top border-secondary justify-content-center p-2"
-                    style="background: rgba(0,0,0,0.2);">
-                    <small class="text-white-50" style="font-size: 0.7rem;">Compatible con Windows 10 y 11 (x64)</small>
-                </div>
+
+            </div>
+
+            <div class="modal-footer border-top border-secondary justify-content-center p-2"
+                style="background: rgba(0,0,0,0.4);">
+                <small class="text-white">Compatible con Windows 10 y 11 (x64)</small>
             </div>
         </div>
     </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
