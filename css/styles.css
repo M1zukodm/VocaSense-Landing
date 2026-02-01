@@ -595,3 +595,7 @@ section {
     justify-content: center;
     font-size: 1.2rem;
 }
+/* Forzar que el video y el poster cubran todo el contenedor sin bordes grises */
+.ratio video {
+    object-fit: cover;
+}
