@@ -199,3 +199,58 @@ header#inicio,
 footer {
     scroll-snap-align: end;
 }
+/* Corrección iPhone/Safari para giro de tarjetas */
+.backface-hidden {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.transform-style-3d {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+/* Animación simple para el menú móvil */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#mobile-menu:not(.hidden) {
+    animation: fadeInDown 0.3s ease-out forwards;
+}
+
+/* Fuerza el giro ignorando el hover del sistema en móvil */
+.is-flipped .group-hover\:rotate-y-180 {
+    transform: rotateY(180deg) !important;
+    -webkit-transform: rotateY(180deg) !important;
+}
+
+/* Evita que los iconos o textos dentro de la tarjeta interfieran con el clic */
+.group * {
+    pointer-events: none;
+}
+
+/* Pero permitimos que la tarjeta en sí reciba el clic */
+.group {
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    /* Quita el cuadro gris al tocar en iPhone */
+}
+/* Asegura que la tarjeta gire cuando tenga la clase activa */
+.is-flipped .group-hover\:rotate-y-180 {
+    transform: rotateY(180deg) !important;
+    -webkit-transform: rotateY(180deg) !important;
+}
+
+/* Transición suave para que el giro no sea brusco al scrollear */
+#flip-features .group-hover\:rotate-y-180 {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}

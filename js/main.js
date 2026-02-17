@@ -157,4 +157,43 @@ applyTheme(currentThemeState);
         lazyVideos.forEach(video => videoObserver.observe(video));
     }
 });
+/* =========================================
+   6. MOBILE MENU LOGIC
+========================================= */
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
+function toggleMenu() {
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
+        // Cambiar icono entre barras y X
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+    }
+}
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', toggleMenu);
+}
+/* =========================================
+   7. SCROLL-REVEAL CARDS (Efecto Automático)
+========================================= */
+const flipCards = document.querySelectorAll('#flip-features .group');
+
+const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // threshold: 0.5 significa que cuando el 50% de la tarjeta es visible, gira
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-flipped');
+        } else {
+            // Se cierra automáticamente al salir de la vista (arriba o abajo)
+            entry.target.classList.remove('is-flipped');
+        }
+    });
+}, { 
+    threshold: 0.6, // Ajusta este valor (0.1 a 1.0) para que gire antes o después
+    rootMargin: "0px 0px -100px 0px" 
+});
+
+flipCards.forEach(card => cardObserver.observe(card));
