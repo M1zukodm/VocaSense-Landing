@@ -177,23 +177,32 @@ if (menuBtn) {
     menuBtn.addEventListener('click', toggleMenu);
 }
 /* =========================================
-   7. SCROLL-REVEAL CARDS (Efecto Automático)
+   7. HYBRID CARD FLIP (Hover en PC / Scroll en Móvil)
 ========================================= */
 const flipCards = document.querySelectorAll('#flip-features .group');
 
-const cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        // threshold: 0.5 significa que cuando el 50% de la tarjeta es visible, gira
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-flipped');
-        } else {
-            // Se cierra automáticamente al salir de la vista (arriba o abajo)
-            entry.target.classList.remove('is-flipped');
-        }
-    });
-}, { 
-    threshold: 0.6, // Ajusta este valor (0.1 a 1.0) para que gire antes o después
-    rootMargin: "0px 0px -100px 0px" 
-});
+// Detectamos si el dispositivo NO tiene mouse (es táctil)
+const isTouchDevice = window.matchMedia("(hover: none)").matches;
 
-flipCards.forEach(card => cardObserver.observe(card));
+if (isTouchDevice) {
+    // LÓGICA PARA MÓVIL: Giro automático al scrollear
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-flipped');
+            } else {
+                entry.target.classList.remove('is-flipped');
+            }
+        });
+    }, { 
+        threshold: 0.7, // Se abre cuando la tarjeta está bien centrada
+        rootMargin: "0px 0px -100px 0px"
+    });
+
+    flipCards.forEach(card => cardObserver.observe(card));
+} else {
+    // LÓGICA PARA LAPTOP: Limpiamos cualquier clase de JS para dejar que el hover de Tailwind actúe solo
+    flipCards.forEach(card => {
+        card.classList.remove('is-flipped');
+    });
+}

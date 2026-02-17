@@ -244,13 +244,14 @@ footer {
     -webkit-tap-highlight-color: transparent;
     /* Quita el cuadro gris al tocar en iPhone */
 }
-/* Asegura que la tarjeta gire cuando tenga la clase activa */
+
+/* Esto asegura que la clase de JS (para móvil) funcione */
 .is-flipped .group-hover\:rotate-y-180 {
     transform: rotateY(180deg) !important;
     -webkit-transform: rotateY(180deg) !important;
 }
 
-/* Transición suave para que el giro no sea brusco al scrollear */
+/* Suavizamos la transición para ambos mundos */
 #flip-features .group-hover\:rotate-y-180 {
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
